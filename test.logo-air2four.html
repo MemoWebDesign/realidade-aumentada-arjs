@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Teste AR - AIR2FOUR + Logo</title>
+    <title>Cartão de Visita RA - Memo Web Design</title>
     <meta charset="UTF-8" />
     <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js@3.4.2/aframe/build/aframe-ar.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+
     <style>
       body {
         margin: 0;
@@ -13,18 +15,19 @@
     </style>
   </head>
   <body>
-    <a-scene embedded arjs="sourceType: webcam;">
-      <!-- Marcador com o logo -->
+    <a-scene embedded arjs>
+      <!-- Usa o marcador personalizado -->
       <a-marker type="pattern" url="https://memowebdesign.github.io/realidade-aumentada-arjs/pattern-logo-Memo-Square-2.patt">
         <!-- Modelo 3D do produto -->
         <a-entity 
           gltf-model="https://memowebdesign.github.io/realidade-aumentada-arjs/AIR2FOUR-Color-v2.glb"
-          scale="0.2 0.2 0.2"
+          scale="0.4 0.4 0.4"
           position="0 0 0"
-          rotation="0 0 0">
+          rotation="0 180 0">
         </a-entity>
       </a-marker>
 
+      <!-- Câmera -->
       <a-entity camera></a-entity>
     </a-scene>
   </body>

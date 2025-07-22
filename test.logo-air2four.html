@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>AR com marcador Hiro - Esfera</title>
+    <title>AR com marcador Hiro - Modelo 3D</title>
     <meta charset="UTF-8" />
     <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js@3.4.2/aframe/build/aframe-ar.min.js"></script>
@@ -13,12 +13,13 @@
     <a-scene embedded arjs>
       <!-- Marcador padrão Hiro -->
       <a-marker preset="hiro">
-        <!-- Esfera vermelha -->
-        <a-sphere 
-          position="0 0.5 0" 
-          radius="0.3" 
-          color="red">
-        </a-sphere>
+        <!-- Modelo 3D glb -->
+        <a-entity 
+          gltf-model="https://memowebdesign.github.io/realidade-aumentada-arjs/AIR2FOUR-Color-v2.glb"
+          position="0 0 0"
+          scale="0.4 0.4 0.4"
+          rotation="0 180 0">
+        </a-entity>
       </a-marker>
 
       <!-- Câmera -->

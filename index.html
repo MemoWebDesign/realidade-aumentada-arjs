@@ -1,21 +1,31 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html>
   <head>
+    <title>AR com marcador Hiro - AIR2FOUR</title>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Minha Realidade Aumentada</title>
-    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-    <script src="https://cdn.rawgit.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js@3.4.2/aframe/build/aframe-ar.min.js"></script>
+    <style>
+      body { margin: 0; overflow: hidden; }
+    </style>
   </head>
-  <body style="margin: 0; overflow: hidden">
+  <body>
     <a-scene embedded arjs>
-      <a-marker type="pattern" url="./patt.hiro">
-        <a-entity
-          gltf-model="url('./modelo.glb')"
-          scale="1 1 1"
-        ></a-entity>
+      
+      <!-- Marcador padrão Hiro -->
+      <a-marker preset="hiro">
+        <!-- Modelo 3D com escala e posição ajustada -->
+        <a-entity 
+          gltf-model="https://memowebdesign.github.io/realidade-aumentada-arjs/AIR2FOUR-Color-v2.glb"
+          position="0 0.2 0"
+          scale="3 3 3"
+          rotation="0 180 0">
+        </a-entity>
       </a-marker>
+
+      <!-- Câmera -->
       <a-entity camera></a-entity>
+
     </a-scene>
   </body>
 </html>
